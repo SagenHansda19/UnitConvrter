@@ -5,12 +5,16 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -50,13 +54,26 @@ fun UnitConverter(innerPadding : PaddingValues){
         Text(text = "Result")
 
         Row {
-            val context = LocalContext.current
-            Button(onClick =  {
-              Toast.makeText(context, "Thanks for clicking the button", Toast.LENGTH_LONG).show()
-            })
-            {
-                Text(text = "Click !")
+            Box() {
+                Button(onClick = { /*TODO*/ }) {
+                    Text(text = "Select")
+                    Icon(Icons.Default.ArrowDropDown, contentDescription = "Arrow Dropdown")
+                }
             }
+
+            Box(){
+                Button(onClick = { /*TODO*/ }) {
+                    Text(text = "Select")
+                    Icon(Icons.Default.ArrowDropDown, contentDescription = "Arrow Dropdown")
+                }
+            }
+//            val context = LocalContext.current //Output popup text
+//            Button(onClick =  {
+//              Toast.makeText(context, "Thanks for clicking the button", Toast.LENGTH_LONG).show()
+//            })
+//            {
+//                Text(text = "Click !")
+//            }
         }
     }
 }
