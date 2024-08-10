@@ -79,7 +79,7 @@ fun UnitConvertor(innerPadding: PaddingValues) {
     val conversionFactor = remember { mutableStateOf(1.0) }
     val oConversionFactor = remember { mutableStateOf(1.0) }
     val customTextStyle = androidx.compose.ui.text.TextStyle(
-        color = Color(0xFF6200EA),        // Custom color (Purple)
+        color = Color(0xFFDBCA2F),        // Custom color (Purple)
         fontSize = 24.sp,                 // Font size in sp
         fontWeight = FontWeight.Bold,     // Bold text
         fontFamily = FontFamily.Serif     // Serif font family
