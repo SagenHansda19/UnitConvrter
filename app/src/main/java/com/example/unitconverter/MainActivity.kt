@@ -1,6 +1,7 @@
 package com.example.unitconverter
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.unitconverter.ui.theme.UnitConverterTheme
@@ -48,7 +50,11 @@ fun UnitConverter(innerPadding : PaddingValues){
         Text(text = "Result")
 
         Row {
-            Button(onClick = { /*TODO*/ }) {
+            val context = LocalContext.current
+            Button(onClick =  {
+              Toast.makeText(context, "Thanks for clicking the button", Toast.LENGTH_LONG).show()
+            })
+            {
                 Text(text = "Click !")
             }
         }
